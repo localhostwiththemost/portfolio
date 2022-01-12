@@ -1,0 +1,74 @@
+.section-contact-direct {
+  padding: 10rem 0;
+  background-color: $color-offwhite;
+  text-align: center;
+
+  &__email-link {
+    font-size: 3rem;
+    color: $color-primary-dark;
+  }
+}
+
+.section-dropaline {
+  padding: 10rem 0;
+  background-color: $color-primary;
+  text-align: center;
+}
+
+.book {
+  background-image: -o-linear-gradient(
+      345deg,
+      rgba($color-offwhite, 0.7) 0%,
+      rgba($color-offwhite, 0.7) 50%,
+      transparent 50%
+    ),
+    url(../img/contact-min.webp);
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-offwhite, 0.7) 0%,
+      rgba($color-offwhite, 0.7) 50%,
+      transparent 50%
+    ),
+    url(../img/contact-min.webp);
+  // 105deg tells the gradient to go left to right diagonally(like the to right bottom value)
+  // clip-path substitute^
+  // The %'s indicate exactly where each color starts, white starts at 0%; the left side, and ends...
+  // ... at 50%; the middle of the element. Then transparent goes from 50% to the right side.
+  // We get a solid line instead of a gradient because both colors are starting at 50%
+  background-repeat: no-repeat;
+  background-size: cover; // 100% means the same thing as cover
+  border-radius: $default-border-radius;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  // 0 x, 1.5rem y, 4rem blur, black w/ 20% opacity
+  height: 72rem; //testing
+
+  @include respond(tab-portrait) {
+    // When the screen width is LESS THAN 900px
+    height: 53rem;
+  }
+
+  @include respond(phone) {
+    // width < 600
+    height: 45rem;
+  }
+
+  @include respond(small-phone) {
+    // width < 450
+    height: 42rem;
+  }
+
+  @include respond(tiny-phone) {
+    // width < 375
+    height: 44rem;
+  }
+
+  &__form {
+    width: 50%; // We only want the form to fill half of the .book element
+    padding: 6rem;
+  }
+}
+
+.footer-contact {
+  margin-top: 3rem;
+}

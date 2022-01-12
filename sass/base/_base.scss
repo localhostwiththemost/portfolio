@@ -1,0 +1,54 @@
+*,
+*::after,
+*::before {
+  /*Universal selector*/
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; /*Sets the box-sizing property on every element on the page to inherit which forces every element to inherit the border-box value in the body rule(Good practice)*/
+}
+
+html {
+  // DEFINES WHAT 1 REM IS
+  font-size: 62.5%; /*62.5% of 16px = 10px (We use a % to be more user friendly, 16px is default)*/
+  /*Global font-size (Each rem unit is now 10px)*/
+  // 1 REM = 10px
+
+  // FOR MEDIA QUERIES
+  @include respond(big-desktop) {
+    // width > 1800px
+    font-size: 75%; // 1rem = 12px, 12/16 = 75%
+  }
+
+  @include respond(tab-landscape) {
+    // width < 1200px?
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-portrait) {
+    // width < 900px?
+    // When we include this media query with the argument tab-portrait, the browser will find the appropriately named query
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(phone) {
+    // width < 600
+    font-size: 43.75%; // 1rem = 7px, 7/16 = 43.75%
+  }
+
+  @include respond(small-phone) {
+    // width < 450
+    font-size: 37.5%; // 1rem = 6px, 6/16 = 37.50%
+  }
+
+  @include respond(tiny-phone) {
+    // width < 375
+    font-size: 31.25%; // 1rem = 5px, 5/16 = 31.25%
+  }
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; /*Changes the box model so that borders/paddings are no longer added to the total width/height we specify for a box*/
+  padding: 3rem; // White padding on all sides of the page (30px)
+}

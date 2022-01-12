@@ -1,0 +1,177 @@
+// SKILLS section
+.skill-box {
+  background-color: rgba($color-white, 0.8); // White background w/ 80% opacity
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: $default-border-radius; // Very slightly rounds off corners
+  -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  // 0 shadow x-axis, 15px y-axis, 40px blur, black w/ 15% opacity
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+
+  @include respond(tab-portrait) {
+    // width < 900px?
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  @include respond(tab-landscape) {
+    // width < 1200px?
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  &__icon {
+    font-size: 6rem; // Increases size of the icons
+    margin-bottom: 0.5rem; // Space between icon and h3
+    display: inline-block;
+    // Makes a gradient in the shape of the icon
+    -webkit-background-clip: text; // Clips the background image exactly where the text sits
+    // icon-font is text
+    background-clip: text;
+  }
+
+  &__content {
+    padding-top: 2rem;
+  }
+
+  &:hover {
+    -webkit-transform: translateY(-1.5rem) scale(1.03);
+    -ms-transform: translateY(-1.5rem) scale(1.03);
+    transform: translateY(-1.5rem) scale(1.03);
+    // On hover, the box will rise 15px and slightly increase in size
+  }
+}
+
+.html5 {
+  color: $color-html-orange;
+}
+
+.css3 {
+  color: $color-css-blue;
+}
+
+.sass {
+  color: $color-sass-pink;
+}
+
+.js {
+  color: $color-js-yellow;
+}
+
+.other-skills {
+  width: 75%;
+  margin: 0 auto; // Centers in parent element
+  -webkit-box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.9);
+  border-radius: $default-border-radius;
+  color: $color-black;
+  font-size: $default-font-size;
+  padding: 6rem;
+
+  @include respond(tab-portrait) {
+    // width < 900
+    padding: 4rem;
+  }
+
+  @include respond(tiny-phone) {
+    // width < 375
+    padding: 3rem;
+  }
+
+  @include respond(mini-phone) {
+    // width < 450
+    padding: 2rem;
+  }
+
+  &__ul {
+    list-style: none;
+  }
+
+  &__ul li {
+    font-size: 2rem;
+
+    @include respond(mini-phone) {
+      // width < 300
+      font-size: $default-font-size;
+    }
+  }
+
+  &__ul li::before {
+    content: "✅";
+    display: inline-block;
+    //margin-right: 0.5rem;
+  }
+}
+
+// SITES SECTION
+.sites-box {
+  width: 75%;
+  margin: 0 auto; // Centers in parent element
+  -webkit-box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.9);
+  border-radius: $default-border-radius;
+  color: $color-black;
+  font-size: $default-font-size;
+  padding: 6rem;
+
+  @include respond(small-phone) {
+    // When the screen width is LESS THAN 450px
+    width: 90%;
+  }
+}
+
+// ABOUT ME section
+.aboutme-textbox {
+  width: 30%;
+  height: 30%;
+  -webkit-box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.9);
+  border-radius: $default-border-radius;
+  color: $color-black;
+  font-size: $default-font-size;
+  padding: 3rem;
+  min-height: 0;
+
+  @include respond(tab-portrait) {
+    width: 60%;
+  }
+
+  @include respond(phone) {
+    // When the screen width is LESS THAN 600px
+    width: 50%;
+  }
+
+  @include respond(small-phone) {
+    // When the screen width is LESS THAN 450px
+    width: 60%;
+    padding: 2rem;
+  }
+
+  @include respond(tiny-phone) {
+    // When the screen width is LESS THAN 375px
+    width: 90%;
+    padding: 2rem;
+  }
+}
+
+// CONTACT PAGE FORM THANK YOU MESSAGE
+.contact-form-thanks {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.3rem;
+  color: $color-black;
+  font-size: 1.6rem;
+  padding: 5rem;
+  text-align: center;
+}

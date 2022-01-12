@@ -1,0 +1,45 @@
+.flex-container {
+  // ABOUT ME SECTION
+  &__aboutme {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+
+    @include respond(tab-portrait) {
+      // width < 900px?
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &--item {
+      @include respond(tab-portrait) {
+        // width < 900px?
+        -ms-flex-item-align: center;
+        align-self: center;
+      }
+    }
+  }
+
+  // SKILLS SECTION
+  &__skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 2rem;
+
+    &--item {
+      &-bottom {
+        white-space: nowrap;
+      }
+    }
+  }
+}

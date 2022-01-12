@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Landing page for portfolio",
+  "main": "main.scss",
+  "scripts": {
+    "build-css": "node-sass --include-path scss sass/main.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Joe",
+  "license": "ISC",
+  "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+  "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
+}

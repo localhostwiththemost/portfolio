@@ -1,0 +1,102 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0px to 375px = Tiny Phone
+375px to 450px = Small Phone
+450px to 600px = Phone
+600px to 900px = Tablet Portrait Mode
+900px to 1200px = Tablet Landscape Mode
+1200px to 1800px = Where our normal styles apply
+1800px+ = Big Desktops
+
+$BREAKPOINT ARGUMENT CHOICES:
+- tiny-phone
+- small-phone
+- phone
+- tab-portrait
+- tab-landscape
+- big-desktop
+
+EMs:
+em's are not effected by the root font size(_base.scss)
+1em = 16px
+Divide the px by 16 to get the em value
+We use em in responsive design instead of px
+
+ORDER OF MEDIA QUERY DEFINITIONS:
+1. Typography
+2. General Layout
+3. Grid
+4. Page Layout
+5. Components
+*/
+
+@mixin respond($breakpoint) {
+  // We will pass different breakpoints into this mixin^
+  @if $breakpoint == mini-phone {
+    @media (max-width: 18.75em) {
+      // 300px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tiny-phone {
+    @media (max-width: 23.4375em) {
+      // 375px
+      @content;
+    }
+  }
+
+  @if $breakpoint == small-phone {
+    @media (max-width: 28.125em) {
+      // 450px
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    // The if directive is the same as an if statement in JS
+    @media (max-width: 37.5em) {
+      // 600px
+      @content; // The content directive allows us to pass a block of code into the mixin
+    }
+  }
+
+  @if $breakpoint == tab-portrait {
+    @media (max-width: 56.25em) {
+      // 900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-landscape {
+    @media (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      // 1800px
+      // min-width because we want the query to START at 1800px
+      @content;
+    }
+  }
+}

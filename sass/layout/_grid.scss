@@ -1,0 +1,67 @@
+.row {
+  max-width: $grid-width; // 114rem = 1140px (max-width means if we have enough available space, the element will be the width we specify, if not due to a smaller viewport, it will fill 100% of the available space)
+  margin: 0 auto; // Trick to center block elements inside another block element
+
+  &:not(:last-child) {
+    // selects every child element except the last one in .row
+    margin-bottom: $gutter-vertical; // Space between each row
+  }
+
+  @include clearfix; // A mixin
+
+  [class^="col-"] {
+    // Selects all elements whos class starts with "col-"
+    float: left; // The height of these cols becomes 0 when we float them, so we must clearfix
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+
+    @include respond(tab-portrait) {
+      // When the screen is LESS THAN 900px, there should be no margin to the right of the cols because the cols are all now one giant column
+      margin-right: 0;
+      margin-bottom: $gutter-vertical-small;
+    }
+
+    @include respond(tab-portrait) {
+      // When the screen width is LESS THAN 900px, these styles are applied.
+      // By setting all of the col's width to 100% they will stack like rows on the page. This results in one giant column so the user can scroll and see all the content easier.
+      width: 100% !important;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    // Divided by 2 for the 2 cols
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    // 2 times the gutter, because we have 3 col and 2 gutters
+  }
+
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    );
+    // Same size as 2 1-of-3 cols + the gutter
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    );
+    // Same size as 2 1-of-4 cols + the gutter
+  }
+
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
+    );
+    // Same size as 3 1-of-4 cols + 2 times the gutter
+  }
+}

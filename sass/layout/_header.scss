@@ -1,0 +1,40 @@
+.header {
+  height: 95vh;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba($color-primary-dark, 0.4)),
+      to(rgba($color-primary, 0))
+    ),
+    url("../img/hero-min.webp");
+  background-image: -o-linear-gradient(
+      top,
+      rgba($color-primary-dark, 0.4),
+      rgba($color-primary, 0)
+    ),
+    url("../img/hero-min.webp");
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-dark, 0.4),
+      rgba($color-primary, 0)
+    ),
+    url("../img/hero-min.webp");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  position: relative;
+
+  &__text-box {
+    position: absolute;
+    top: 50%; /*40% from the top and 50% from the left of the header(parent element)*/
+    left: 50%; /*Measurement starts at the top left of the .text-box element(Therefore its off center)*/
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(
+      -50%,
+      -50%
+    ); /*Shifts 50% of the element's(text-box) width to the left and 50% of the element's height to the top(centers text-box)*/
+    text-align: center; /*Centers call to action button under the h1*/
+  }
+}

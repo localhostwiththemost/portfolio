@@ -1,0 +1,164 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.7; /*The line-height is 1.7 times bigger than default(depends on font-size)*/
+
+  p {
+    font-family: "Roboto Slab", serif;
+    font-size: $default-font-size;
+  }
+
+  .heading-primary {
+    // ALL h1's
+    color: $color-white;
+    text-transform: uppercase;
+
+    &--main {
+      // HI IM JOE heading
+      display: block; /*Block elements create linebreaks before and after them(what we want here)*/
+      font-size: 6rem;
+      font-weight: 800;
+      letter-spacing: 0.3rem;
+      padding-bottom: 1.5rem;
+      text-shadow: -5px 5px 0px $color-primary, -10px 10px 0px #43ada7,
+        -15px 15px 0px #39a39d;
+
+      @include respond(phone) {
+        // width < 600
+        text-shadow: -3px 3px 0px $color-primary, -6px 6px 0px #43ada7,
+          -8px 8px 0px #39a39d;
+      }
+    }
+
+    &--sub {
+      // A web dev and programmer heading
+      display: block; /*Block elements take up 100% of the width of the viewport(not height)*/
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: 0.3rem;
+      margin-bottom: 2rem; // Space between heading and btn below
+      white-space: nowrap;
+      padding-bottom: 2rem;
+      text-shadow: 3px 3px 3px $color-black;
+
+      @include respond(tab-landscape) {
+        // width < 1200px?
+        white-space: normal; // sub heading text now wraps
+      }
+
+      @include respond(tiny-phone) {
+        // width < 450
+        font-size: 2.5rem;
+      }
+    }
+
+    &--title {
+      display: block;
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: 1rem;
+    }
+  }
+
+  .heading-secondary {
+    // ALL h2's
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.2rem;
+    display: inline-block; /*inline-block so the gradient is exclusively behind the heading (block elements take up 100% of the availble width, inline-block avoids this)*/
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from($color-primary),
+      to($color-primary-dark)
+    );
+    background-image: -o-linear-gradient(
+      top,
+      $color-primary,
+      $color-primary-dark
+    );
+    background-image: linear-gradient(
+      to bottom,
+      $color-primary,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text; /*Clips the background image exactly where the text sits*/
+    background-clip: text;
+    color: transparent; // Makes the text transparent so we only see the gradient, which is in the shape of the text
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+
+      @include respond(phone) {
+        // width < 600
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+      }
+    }
+
+    @include respond(mini-phone) {
+      // width < 300
+      font-size: 3rem;
+    }
+  }
+
+  .heading-secondary-white {
+    // White h2's
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    letter-spacing: 0.2rem;
+    display: inline-block;
+    color: $color-white;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+
+      @include respond(phone) {
+        // width < 600
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+      }
+    }
+
+    @include respond(tab-portrait) {
+      // width < 900px?
+      white-space: normal;
+    }
+
+    @include respond(mini-phone) {
+      // width < 300
+      font-size: 3rem;
+    }
+  }
+
+  .heading-tertiary {
+    // ALL h3's
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+
+    @include respond(tiny-phone) {
+      // width < 450
+      font-size: 2rem;
+      letter-spacing: 0;
+    }
+  }
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hi I'm Joe, a web developer & programmer. I love to build modern websites and applications for today's web. Visit my contact page if you are in need of my services."
+    />
+    <meta name="theme-color" content="#50bab4" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Joseph Powell | Web Developer</title>
+  </head>
+
+  <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#aboutme" class="navigation__link">About Me</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#skills" class="navigation__link">Skills</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#resume" class="navigation__link">Resume</a>
+          </li>
+          <li class="navigation__item">
+            <a href="contact.html" class="navigation__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <header class="header" id="header">
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Hi, I'm Joe</span>
+          <!--Span is used to markup part of some text, in this case h1-->
+          <span class="heading-primary--sub"
+            >A web developer & programmer based in Houston, Tx🚀</span
+          >
+        </h1>
+        <a
+          href="contact.html#dropaline"
+          class="btn-main btn-main__white btn-main__animated"
+          >Hire Me</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="section-skills" id="skills">
+        <div class="u-center-text">
+          <h2 class="heading-secondary u-margin-bottom-medium">Skills</h2>
+        </div>
+        <div class="row">
+          <div class="col-1-of-4">
+            <!--The code for the grid remains unchanged(no additional padding etc), instead add a box within the col to style-->
+            <div class="skill-box">
+              <div class="skill-box__content">
+                <ion-icon
+                  name="logo-html5"
+                  class="skill-box__icon html5"
+                  alt="HTML5 Logo"
+                ></ion-icon>
+                <h3 class="heading-tertiary u-margin-bottom-small">HTML5</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="skill-box">
+              <div class="skill-box__content">
+                <ion-icon
+                  name="logo-css3"
+                  class="skill-box__icon css3"
+                  alt="CSS3 Logo"
+                ></ion-icon>
+                <h3 class="heading-tertiary u-margin-bottom-small">CSS3</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="skill-box">
+              <div class="skill-box__content">
+                <ion-icon
+                  name="logo-sass"
+                  class="skill-box__icon sass"
+                  alt="SASS Logo"
+                ></ion-icon>
+                <h3 class="heading-tertiary u-margin-bottom-small">SASS</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-4">
+            <div class="skill-box">
+              <div class="skill-box__content">
+                <ion-icon
+                  name="logo-javascript"
+                  class="skill-box__icon js"
+                  alt="JavaScript Logo"
+                ></ion-icon>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  JavaScript
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="other-skills">
+            <h3 class="heading-tertiary u-center-text u-margin-bottom-medium">
+              I also have experience using:
+            </h3>
+            <ul class="other-skills__ul">
+              <div class="flex-container__skills">
+                <li class="flex-container__skills--item">jQuery</li>
+                <li class="flex-container__skills--item">PHP</li>
+                <li class="flex-container__skills--item">Bootstrap</li>
+              </div>
+              <div class="flex-container__skills u-margin-top-small">
+                <li class="flex-container__skills--item-bottom">CSS Flexbox</li>
+                <li class="flex-container__skills--item-bottom">CSS Grid</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-aboutme" id="aboutme">
+        <div class="u-center-text">
+          <h2 class="heading-secondary-white u-margin-bottom-medium">
+            About Me
+          </h2>
+        </div>
+        <div class="flex-container__aboutme">
+          <div class="aboutme-textbox flex-container__aboutme--item">
+            <p>
+              Hi, I'm Joe; a self-taught front end developer from Houston, TX.
+              First and foremost, I love to learn, especially concepts and tools
+              I can use to build things. I enjoy the process of UI/UX design
+              because I believe user experience is just as important as the
+              programming logic behind the application itself. As for career
+              goals, I have many, including becoming a leader in the tech
+              industry and ultimately, creating applications that improve not
+              only the experience, but the lives of those who use them.
+            </p>
+          </div>
+          <div class="img-container flex-container__aboutme--item">
+            <img
+              src="img/me-min.webp"
+              class="img-container__aboutimg"
+              alt="A picture of Joe"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section-resume" id="resume">
+        <div class="u-center-text">
+          <h2 class="heading-secondary u-margin-bottom-medium">Applications</h2>
+        </div>
+        <div class="row u-center-text">
+          <div class="col-1-of-3">
+            <img
+              src="img/comingsoon-min.webp"
+              class="img-container__projectimg"
+              alt="An image of the words 'Coming Soon'"
+            />
+          </div>
+          <div class="col-1-of-3">
+            <img
+              src="img/comingsoon-min.webp"
+              class="img-container__projectimg"
+              alt="An image of the words 'Coming Soon'"
+            />
+          </div>
+          <div class="col-1-of-3">
+            <img
+              src="img/comingsoon-min.webp"
+              class="img-container__projectimg"
+              alt="An image of the words 'Coming Soon'"
+            />
+          </div>
+        </div>
+        <a href="#" class="btn-text">Download Resume&#x21e9;</a>
+      </section>
+
+      <section class="section-sites" id="sites">
+        <div class="u-center-text">
+          <h2 class="heading-secondary u-margin-bottom-medium">
+            Sites I've Created
+          </h2>
+        </div>
+        <div class="sites-box">
+          <div class="row u-center-text">
+            <a
+              href="https://www.thatsbalance.com"
+              target="_blank"
+              class="section-contact-direct__email-link"
+              >www.thatsbalance.com</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="row social">
+        <div class="social__navigation">
+          <ul class="social__list">
+            <li class="social__item">
+              <a
+                href="mailto:jpowelldev@gmail.com"
+                target="_blank"
+                class="social__link social__gmail"
+                ><ion-icon name="mail-outline"></ion-icon
+              ></a>
+            </li>
+            <li class="social__item">
+              <a
+                href="https://github.com/localhostwiththemost"
+                target="_blank"
+                class="social__link social__github"
+                ><ion-icon name="logo-github"></ion-icon
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#header" class="footer__link">Home</a>
+              </li>
+              <li class="footer__item">
+                <a href="#skills" class="footer__link">Skills</a>
+              </li>
+              <li class="footer__item">
+                <a href="#resume" class="footer__link">Resume</a>
+              </li>
+              <li class="footer__item">
+                <a href="contact.html" class="footer__link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Built by <a href="#aboutme" class="footer__link">Joseph Powell</a>;
+            &nbsp; a Houston based front end developer. &nbsp; Copyright&copy;
+            by Joseph Powell.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

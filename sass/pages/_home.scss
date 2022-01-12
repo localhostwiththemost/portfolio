@@ -1,0 +1,67 @@
+.section-skills {
+  padding: 10rem 0;
+  padding-bottom: 25rem;
+  background-color: $color-offwhite;
+
+  @include respond(tab-landscape) {
+    // width < 1200px?
+    padding: 20rem 0;
+  }
+}
+
+.section-aboutme {
+  padding: 8.5rem 0;
+  background-size: cover;
+  background-position: top;
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba($color-primary-dark, 0.4)),
+      to(rgba($color-primary-dark, 0))
+    ),
+    url("../img/books-min.webp");
+  background-image: -o-linear-gradient(
+      top,
+      rgba($color-primary-dark, 0.4),
+      rgba($color-primary-dark, 0)
+    ),
+    url("../img/books-min.webp");
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-dark, 0.4),
+      rgba($color-primary-dark, 0)
+    ),
+    url("../img/books-min.webp");
+  -webkit-transform: skewY(-7deg);
+  -ms-transform: skewY(-7deg);
+  transform: skewY(-7deg); // Shifts the section upwards/diagonally
+  margin-top: -10rem; // Negative margin to start this section immediatly after the last section
+
+  & > * {
+    // > is the direct child selector, in this case we're selecting everything * that is a direct child of .section-features (The elements that aren't nested like .row)
+    -webkit-transform: skewY(7deg);
+    -ms-transform: skewY(7deg);
+    transform: skewY(7deg);
+    // Skews the boxes in the opposite direction of the section, centers them
+  }
+
+  @include respond(tab-landscape) {
+    // width < 1200px?
+    margin-top: -5rem;
+  }
+}
+
+.section-resume {
+  background-color: $color-offwhite;
+  text-align: center;
+  padding: 25rem 0 10rem 0; // 250px top, 0 right, 100px bottom, 0 left
+  margin-top: -10rem;
+}
+
+.section-sites {
+  background-color: $color-offwhite;
+  text-align: center;
+  padding: 25rem 0 15rem 0; // 250px top, 0 right, 150px bottom, 0 left
+  margin-top: -10rem;
+}

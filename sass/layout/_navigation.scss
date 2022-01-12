@@ -1,0 +1,209 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.navigation {
+  &__checkbox {
+    display: none; // Hides the checkbox
+  }
+
+  &__button {
+    // The actual menu button
+    background-color: $color-white;
+    height: 7rem; // Slightly larger size than the green circle to completely cover it
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6rem; // The btn is 1rem wider than the background and therefore .5rem further right...
+    right: 6rem; // ... and closer to the top
+    z-index: 2000; // Needs to be on top of the background
+    -webkit-box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    text-align: center; // Centers menu bars on btn
+    cursor: pointer;
+  }
+
+  &__background {
+    // The blue circle that expands and becomes the nav menu
+    height: 6rem; // Same height/width because its a circle
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed; // Stays in the same place on screen, even on scroll
+    top: 6.5rem;
+    right: 6.5rem;
+    background-image: -o-radial-gradient($color-primary, $color-primary-dark);
+    background-image: radial-gradient($color-primary, $color-primary-dark);
+    // Radial gradients start in the center of the element and goes out in all directions
+    z-index: 1000; // Ensures element will stay on top of any other element when scrolled
+    // z-index requires an element to have its position defined (in this cased fixed)
+    -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    -o-transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1),
+      -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); // bg animation
+    // cubic-bezier allows us to create custom animations for our elements
+  }
+
+  &__nav {
+    // Contains ul/li
+    height: 100vh; // 100% of the viewport height
+    //width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; // nav items will come in from the left when menu is opened
+    z-index: 1500; // Needs to be on top of the background, but under the menu
+
+    opacity: 0; // The nav shouldn't be visible until we open click on the menu
+    width: 0; // The width should't be available either, since it wont be visible yet
+    -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    // nav item animation when menu is opened
+    overflow: hidden; // Removes invisible nav links when menu isn't open
+  }
+
+  &__list {
+    // ul
+    position: absolute;
+    top: 50%; // We want the list to appear in the middle of the page when the menu is opened
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); // Centers ul
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 5px $color-primary-dark;
+  }
+
+  &__item {
+    // li
+    margin: 1rem; // Vertical space between each li
+  }
+
+  &__link {
+    // Each link within each li
+    &:link,
+    &:visited {
+      display: inline-block; // Allows us to apply padding, transform, etc.
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 1rem 2rem; // Top 10px, right 20px
+      color: $color-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: -o-linear-gradient(
+        344deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-image: linear-gradient(
+        106deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      // The white background behind the hovered link
+      // 114deg defines the angle the corner of the white bg comes in from
+      // The bg color starts out as transparent, but at 50% the white slides in
+      background-size: 220%; // White bg will start to the right of each link but invisible
+      // 220% completely covers the background of the hovered link
+      -webkit-transition: all 0.4s;
+      -o-transition: all 0.4s;
+      transition: all 0.4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%; // When hovered, the white bg will slide under the link from right
+      color: $color-primary-dark; // Allows us to see text when hovered
+      -webkit-transform: translateX(1rem);
+      -ms-transform: translateX(1rem);
+      transform: translateX(1rem);
+    }
+  }
+
+  // FUNCTIONALITY
+  &__checkbox:checked ~ &__background {
+    // When we hit the label, the checkbox becomes checked, which causes the nav bg to become visible
+    // We're using the sibling selector ~ to select navigation_background (Check HTML)
+    -webkit-transform: scale(80);
+    -ms-transform: scale(80);
+    transform: scale(80);
+    // Now when the label(menu) is clicked, the green bg is expanded across the page
+  }
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1; // Now the nav items will be visible on the blue bg menu
+    width: 100%;
+  }
+
+  // ICON
+  &__icon {
+    position: relative; // Parent element of before/after pseudo elements
+    margin-top: 3.5rem; // Places menu icon within the actual btn
+
+    &,
+    &::before,
+    &::after {
+      // __icon, before, and after are all lines in the menu icon
+      width: 3rem;
+      height: 2px; // We use px here because we never want this to change(if we later change rem)
+      background-color: $color-grey;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      // For the before/after pseudo elements to appear, their content must be defined
+      position: absolute; // Positioning each of the lines in the menu icon
+      left: 0;
+      -webkit-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; // Allows animation on the menu bars
+    }
+
+    &::before {
+      top: -0.8rem; // To position menu bar up
+    }
+
+    &::after {
+      top: 0.8rem; // To position menu bar down
+    }
+  }
+
+  &__button:hover &__icon::before {
+    // When the menu btn is hovered, the bars of the menu icon will slightly space apart
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    // When the menu btn is hovered, the bars of the menu icon will slightly space apart
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon {
+    // When the checkbox is checked, we select its sibling element, btn, using the adjacent sibling selctor + and then we select the btn's child element, icon (Check HTML)
+    background-color: transparent; // Makes center bar on the menu icon disappear on click
+  }
+
+  &__checkbox:checked + &__button &__icon::before {
+    // The before/after icon pseudo classes will now rotate into the X shape on the menu btn
+    top: 0; // Positions each pseudo element to where the lines of the X will actuall cross
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    // Originallly 45deg, we've subtracted 45 from 180 to get a cool flip of each side of the X
+  }
+
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    // Each pseudo element must rotate in opposite directions to create the X
+  }
+}

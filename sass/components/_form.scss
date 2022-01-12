@@ -1,0 +1,130 @@
+.form {
+  &__group:not(:last-child) {
+    margin-bottom: 2rem;
+
+    @include respond(phone) {
+      // width < 600
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    font-size: 1.5rem;
+    font-family: inherit; // Browsers change the font of forms automatically so we must reset it here
+    color: inherit; // Same goes for font color^
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.9);
+    border: none; // Removes default border
+    border-bottom: 3px solid transparent;
+    // We need the border-bottom in the initial state to prevent the email input from being pushed...
+    //... down by the 3px that are created when the full name input is in focus state.
+    // transparent because we only want the border to appear when an input is in focus state
+    width: 90%; // Takes up 90% of the .book element's width
+    display: block; // Must define block to use padding properties
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; // Transition from red to green when user types in inputs
+
+    @include respond(phone) {
+      // width < 600
+      padding: 1rem 2rem;
+    }
+
+    @include respond(small-phone) {
+      // width < 450
+      padding: 0.5rem 2rem;
+    }
+
+    &:focus {
+      // When the form is clicked, it is in the focus state
+      outline: none; // Removes blue outline
+      -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+      // We apply box-shadow here to make clear the form is in focus state since we removed the outline
+      border-bottom: 3px solid $color-success-green;
+    }
+
+    &:focus:invalid {
+      // Styles for the input element when in focus state and the input is invalid
+      border-bottom: 3px solid $color-error-red;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey;
+    }
+
+    &::-moz-placeholder {
+      color: $color-grey;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-grey;
+    }
+
+    &::-ms-input-placeholder {
+      color: $color-grey;
+    }
+
+    &::placeholder {
+      color: $color-grey;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-grey; // Styles placeholder text(Chrome, Safari)
+    }
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; // Removes number spinner from phone input
+    margin: 0;
+  }
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 8rem; // We're using margin to position the labels directly under the placeholders
+    margin-top: 0.7rem;
+    display: block; // We must define the display as block to use margin properties
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    white-space: nowrap;
+
+    @include respond(tab-portrait) {
+      // width < 900px?
+      margin-right: 6rem;
+    }
+
+    @include respond(phone) {
+      // width < 600
+      margin-right: 4rem;
+    }
+
+    @include respond(tiny-phone) {
+      // width < 375
+      margin-right: 2rem;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    // We use the adjacent sibling selector(+) to select both the input and label because in the...
+    // ... html, they are siblings within the same div.
+    opacity: 0; // We need opacity to animate the label appearing
+    visibility: hidden; // With opacity:0, the element is stll there just not visible. This fixs it.
+    -webkit-transform: translateY(-4rem);
+    -ms-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+    // In this initial state, the label will start in the actual input and will then move down and...
+    // ... become visble later when the user begins typing in the input.
+  }
+
+  &__btn {
+    margin-right: 7rem;
+  }
+
+  &__invalid {
+    outline: 2px solid $color-error-red;
+  }
+}
