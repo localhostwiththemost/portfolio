@@ -20,8 +20,11 @@
       rgba($color-primary, 0)
     ),
     url("../img/hero-min.webp");
+  -webkit-background-size: cover;
   background-size: cover;
+  -webkit-background-position: top;
   background-position: top;
+  -webkit-background-attachment: fixed;
   background-attachment: fixed;
   position: relative;
 
