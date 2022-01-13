@@ -65,7 +65,6 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     text-transform: uppercase;
-    white-space: nowrap;
     letter-spacing: 0.2rem;
     display: inline-block; /*inline-block so the gradient is exclusively behind the heading (block elements take up 100% of the availble width, inline-block avoids this)*/
     background-image: -webkit-gradient(
@@ -108,7 +107,7 @@ body {
 
     @include respond(mini-phone) {
       // width < 300
-      font-size: 3rem;
+      //font-size: 3rem;
     }
   }
 
@@ -117,7 +116,6 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     text-transform: uppercase;
-    white-space: nowrap;
     letter-spacing: 0.2rem;
     display: inline-block;
     color: $color-white;
@@ -146,7 +144,7 @@ body {
 
     @include respond(mini-phone) {
       // width < 300
-      font-size: 3rem;
+      //font-size: 3rem;
     }
   }
 
@@ -155,9 +153,9 @@ body {
     font-size: 2.5rem;
     letter-spacing: 0.2rem;
 
-    @include respond(tiny-phone) {
+    @include respond(small-phone) {
       // width < 450
-      font-size: 2rem;
+      //font-size: 2rem;
       letter-spacing: 0;
     }
   }

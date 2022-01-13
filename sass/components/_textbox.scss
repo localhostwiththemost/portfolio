@@ -74,22 +74,7 @@
   color: $color-black;
   font-size: $default-font-size;
   padding: 6rem;
-  white-space: nowrap;
-
-  @include respond(tab-portrait) {
-    // width < 900
-    padding: 4rem;
-  }
-
-  @include respond(tiny-phone) {
-    // width < 375
-    padding: 3rem;
-  }
-
-  @include respond(mini-phone) {
-    // width < 450
-    padding: 2rem;
-  }
+  text-align: center;
 
   &__ul {
     list-style: none;
@@ -97,6 +82,7 @@
 
   &__ul li {
     font-size: 2rem;
+    white-space: nowrap;
 
     @include respond(mini-phone) {
       // width < 300
@@ -121,6 +107,7 @@
   color: $color-black;
   font-size: $default-font-size;
   padding: 6rem;
+  text-align: center;
 
   @include respond(small-phone) {
     // When the screen width is LESS THAN 450px

@@ -4,7 +4,7 @@
   text-align: center;
 
   &__email-link {
-    font-size: 3rem;
+    //font-size: 3rem;
     color: $color-primary-dark;
   }
 }
@@ -85,13 +85,10 @@
   font-size: 1.6rem;
   padding: 5rem;
   text-align: center;
+  text-transform: none;
+  white-space: normal;
 }
 
 .thanks-bg {
   background-color: $color-primary;
-
-  @include respond(tab-portrait) {
-    // When the screen width is LESS THAN 900px
-    width: 90%;
-  }
 }

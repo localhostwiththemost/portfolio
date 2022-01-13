@@ -44,6 +44,15 @@ html {
   font-size: 62.5%;
   /*62.5% of 16px = 10px (We use a % to be more user friendly, 16px is default)*/
   /*Global font-size (Each rem unit is now 10px)*/
+  /*@include respond(small-phone) {
+    // width < 450
+    font-size: 37.5%; // 1rem = 6px, 6/16 = 37.50%
+  }
+
+  @include respond(tiny-phone) {
+    // width < 375
+    font-size: 31.25%; // 1rem = 5px, 5/16 = 31.25%
+  }*/
 }
 @media (min-width: 112.5em) {
   html {
@@ -63,16 +72,6 @@ html {
 @media (max-width: 37.5em) {
   html {
     font-size: 43.75%;
-  }
-}
-@media (max-width: 28.125em) {
-  html {
-    font-size: 37.5%;
-  }
-}
-@media (max-width: 23.4375em) {
-  html {
-    font-size: 31.25%;
   }
 }
 
@@ -142,7 +141,6 @@ body .heading-secondary {
   font-size: 3.5rem;
   font-weight: 800;
   text-transform: uppercase;
-  white-space: nowrap;
   letter-spacing: 0.2rem;
   display: inline-block;
   /*inline-block so the gradient is exclusively behind the heading (block elements take up 100% of the availble width, inline-block avoids this)*/
@@ -170,16 +168,10 @@ body .heading-secondary:hover {
     transform: none;
   }
 }
-@media (max-width: 18.75em) {
-  body .heading-secondary {
-    font-size: 3rem;
-  }
-}
 body .heading-secondary-white {
   font-size: 3.5rem;
   font-weight: 800;
   text-transform: uppercase;
-  white-space: nowrap;
   letter-spacing: 0.2rem;
   display: inline-block;
   color: #fff;
@@ -205,18 +197,12 @@ body .heading-secondary-white:hover {
     white-space: normal;
   }
 }
-@media (max-width: 18.75em) {
-  body .heading-secondary-white {
-    font-size: 3rem;
-  }
-}
 body .heading-tertiary {
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
 }
-@media (max-width: 23.4375em) {
+@media (max-width: 28.125em) {
   body .heading-tertiary {
-    font-size: 2rem;
     letter-spacing: 0;
   }
 }
@@ -612,28 +598,14 @@ body .heading-tertiary {
   color: #000;
   font-size: 1.6rem;
   padding: 6rem;
-  white-space: nowrap;
-}
-@media (max-width: 56.25em) {
-  .other-skills {
-    padding: 4rem;
-  }
-}
-@media (max-width: 23.4375em) {
-  .other-skills {
-    padding: 3rem;
-  }
-}
-@media (max-width: 18.75em) {
-  .other-skills {
-    padding: 2rem;
-  }
+  text-align: center;
 }
 .other-skills__ul {
   list-style: none;
 }
 .other-skills__ul li {
   font-size: 2rem;
+  white-space: nowrap;
 }
 @media (max-width: 18.75em) {
   .other-skills__ul li {
@@ -655,6 +627,7 @@ body .heading-tertiary {
   color: #000;
   font-size: 1.6rem;
   padding: 6rem;
+  text-align: center;
 }
 @media (max-width: 28.125em) {
   .sites-box {
@@ -732,6 +705,11 @@ body .heading-tertiary {
 .flex-container__skills--item-bottom {
   white-space: nowrap;
 }
+@media (max-width: 23.4375em) {
+  .flex-container__skills {
+    flex-direction: column;
+  }
+}
 .flex-container__footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -758,6 +736,12 @@ body .heading-tertiary {
   .flex-container__footer {
     -ms-flex-pack: distribute;
     justify-content: space-around;
+  }
+}
+@media (max-width: 28.125em) {
+  .flex-container__footer {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 .flex-container__footer--item:first-child {
@@ -1141,7 +1125,6 @@ html {
   text-align: center;
 }
 .section-contact-direct__email-link {
-  font-size: 3rem;
   color: #368883;
 }
 
@@ -1201,15 +1184,12 @@ html {
   font-size: 1.6rem;
   padding: 5rem;
   text-align: center;
+  text-transform: none;
+  white-space: normal;
 }
 
 .thanks-bg {
   background-color: #50bab4;
-}
-@media (max-width: 56.25em) {
-  .thanks-bg {
-    width: 90%;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

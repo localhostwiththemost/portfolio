@@ -65,14 +65,14 @@ $message_sent = true;
       <?php
       if($message_sent):
       ?>
-    <div class="thanks-bg">
+    <body class="thanks-bg">
      <div class="contact-form-thanks u-margin-top-big u-margin-bottom-big">
-      <h2 class="heading-secondary">Thanks, we'll be in touch</h2>
+      <h2 class="heading-secondary">Thanks, I'll be in touch</h2>
       <div class="u-center-text u-margin-top-small">
         <a href="index.html#header" class="btn-text">Return to home page</a>
       </div>
     </div>
-      </div>
+      </body>
 
       <?php
       else:
