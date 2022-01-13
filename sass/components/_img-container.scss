@@ -1,34 +1,12 @@
 .img-container {
-  display: block;
-
   &__aboutimg {
     width: 90%;
     border-radius: $default-border-radius;
     -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.35);
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.35);
     min-height: 0;
-
-    @include respond(tab-portrait) {
-      // When the screen width is LESS THAN 900px
-      margin: 2.8rem;
-    }
-
-    @include respond(small-phone) {
-      // When the screen width is LESS THAN 450px
-      width: 80%;
-      margin: 6rem;
-    }
-
-    @include respond(tiny-phone) {
-      // When the screen width is LESS THAN 375px
-      //width: 83%;
-      margin: 6.5rem;
-    }
-
-    @include respond(mini-phone) {
-      // width < 300
-      margin: 4.5rem;
-    }
+    display: block;
+    margin: auto;
   }
 
   &__projectimg {

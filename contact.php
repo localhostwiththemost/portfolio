@@ -65,13 +65,14 @@ $message_sent = true;
       <?php
       if($message_sent):
       ?>
-
+    <div class="thanks-bg">
      <div class="contact-form-thanks u-margin-top-big u-margin-bottom-big">
       <h2 class="heading-secondary">Thanks, we'll be in touch</h2>
       <div class="u-center-text u-margin-top-small">
         <a href="index.html#header" class="btn-text">Return to home page</a>
       </div>
     </div>
+      </div>
 
       <?php
       else:
@@ -220,8 +221,8 @@ $message_sent = true;
       </div>
 
       <div class="row">
-        <div class="col-1-of-2">
-          <div class="footer__navigation">
+        <div class="flex-container flex-container__footer">  
+        <div class="footer__navigation flex-container__footer--item">
             <ul class="footer__list">
               <li class="footer__item">
                 <a href="index.html#header" class="footer__link">Home</a>
@@ -236,17 +237,14 @@ $message_sent = true;
                 <a href="contact.html" class="footer__link">Contact</a>
               </li>
             </ul>
-          </div>
         </div>
 
-        <div class="col-1-of-2">
-          <p class="footer__copyright">
+          <p class="footer__copyright flex-container__footer--item">
             Built by
             <a href="index.html#aboutme" class="footer__link">Joseph Powell</a>;
-            &nbsp; a Houston based front end developer. &nbsp; Copyright&copy;
-            by Joseph Powell.
+            &nbsp; a Houston based front end developer.
           </p>
-        </div>
+      </div>
       </div>
     </footer>
 

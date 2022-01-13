@@ -1,6 +1,6 @@
 .header {
   height: 95vh;
-  background-image: -webkit-gradient(
+  -webkit-background-image: linear-gradient(
       linear,
       left top,
       left bottom,
@@ -27,6 +27,11 @@
   -webkit-background-attachment: fixed;
   background-attachment: fixed;
   position: relative;
+
+  @include respond(phone) {
+    // When the screen width is LESS THAN 600px scroll with the page(mobile safari bug)
+    background-attachment: scroll;
+  }
 
   &__text-box {
     position: absolute;
