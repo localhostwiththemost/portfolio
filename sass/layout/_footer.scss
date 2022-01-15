@@ -74,6 +74,11 @@
     border-top: 1px solid $color-white;
     padding-top: 2rem;
     display: inline-block;
+
+    @include respond(phone) {
+      // When the screen width is LESS THAN 600px
+      text-align: center;
+    }
   }
 }
 

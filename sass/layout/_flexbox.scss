@@ -83,6 +83,12 @@
       margin-right: 2rem;
     }
 
+    @include respond(tiny-phone) {
+      // width < 375
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
     &--item:first-child {
       margin-bottom: 2rem;
     }

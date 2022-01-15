@@ -4,8 +4,18 @@
   text-align: center;
 
   &__email-link {
-    //font-size: 3rem;
+    font-size: 3rem;
     color: $color-primary-dark;
+
+    @include respond(phone) {
+      // width < 600
+      font-size: 2rem;
+    }
+
+    @include respond(mini-phone) {
+      // width < 300
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -51,16 +61,48 @@
   @include respond(phone) {
     // width < 600
     height: 45rem;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-offwhite, 0.7) 0%,
+        rgba($color-offwhite, 0.7) 55%,
+        transparent 55%
+      ),
+      url(../img/contact-min.webp);
   }
 
   @include respond(small-phone) {
     // width < 450
     height: 42rem;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-offwhite, 0.7) 0%,
+        rgba($color-offwhite, 0.7) 65%,
+        transparent 65%
+      ),
+      url(../img/contact-min.webp);
   }
 
   @include respond(tiny-phone) {
     // width < 375
     height: 44rem;
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-offwhite, 0.7) 0%,
+        rgba($color-offwhite, 0.7) 73%,
+        transparent 73%
+      ),
+      url(../img/contact-min.webp);
+  }
+
+  @include respond(mini-phone) {
+    // width < 300
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-offwhite, 0.7) 0%,
+        rgba($color-offwhite, 0.7) 100%,
+        transparent 100%
+      ),
+      url(../img/contact-min.webp);
   }
 
   &__form {

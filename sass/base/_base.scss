@@ -30,21 +30,6 @@ html {
     // When we include this media query with the argument tab-portrait, the browser will find the appropriately named query
     font-size: 50%; // 1rem = 8px, 8/16 = 50%
   }
-
-  @include respond(phone) {
-    // width < 600
-    font-size: 43.75%; // 1rem = 7px, 7/16 = 43.75%
-  }
-
-  /*@include respond(small-phone) {
-    // width < 450
-    font-size: 37.5%; // 1rem = 6px, 6/16 = 37.50%
-  }
-
-  @include respond(tiny-phone) {
-    // width < 375
-    font-size: 31.25%; // 1rem = 5px, 5/16 = 31.25%
-  }*/
 }
 
 body {

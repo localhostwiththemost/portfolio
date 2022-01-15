@@ -17,7 +17,8 @@
 
 // MEDIA QUERY MANAGER
 /*
-0px to 375px = Tiny Phone
+0px to 300px = Mini Phone
+300px to 375px = Tiny Phone
 375px to 450px = Small Phone
 450px to 600px = Phone
 600px to 900px = Tablet Portrait Mode
@@ -26,6 +27,7 @@
 1800px+ = Big Desktops
 
 $BREAKPOINT ARGUMENT CHOICES:
+- mini-phone
 - tiny-phone
 - small-phone
 - phone

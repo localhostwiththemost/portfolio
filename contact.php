@@ -61,7 +61,7 @@ $message_sent = true;
   </head>
 
   <body>
-
+    
       <?php
       if($message_sent):
       ?>
@@ -73,8 +73,8 @@ $message_sent = true;
       </div>
     </div>
       </body>
-
-      <?php
+    
+    <?php
       else:
       ?>
     <div class="navigation">
@@ -129,65 +129,67 @@ $message_sent = true;
             <div class="book__form">
               <!--Container that sits on the left side of the .book element-->
               <form action="contact.php" method="POST" class="form">
-                <div class="u-margin-bottom-medium">
-                  <h2 class="heading-secondary">Drop me a line</h2>
-                </div>
+                <h2 class="heading-secondary heading-secondary__form">
+                  Drop me a line
+                </h2>
 
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input <?= $invalid_class_name ?? "" ?>"
-                    placeholder="Name or Company Name"
-                    autocomplete="off"
-                    name="name"
-                    id="name"
-                    required
-                  />
-                  <!--The label and input are connected thru the id and for properties. Both must have the same value(name)-->
-                  <label for="name" class="form__label">Name</label>
-                </div>
+                <div class="flex-container flex-container__form">
+                  <div class="form__group">
+                    <input
+                      type="text"
+                      class="form__input <?= $invalid_class_name ?? "" ?>"
+                      placeholder="Name or Company Name"
+                      autocomplete="off"
+                      name="name"
+                      id="name"
+                      required
+                    />
+                    <!--The label and input are connected thru the id and for properties. Both must have the same value(name)-->
+                    <label for="name" class="form__label">Name</label>
+                  </div>
 
-                <div class="form__group">
-                  <input
-                    type="number"
-                    inputmode="numeric"
-                    class="form__input <?= $invalid_class_name ?? "" ?>"
-                    placeholder="Phone Number"
-                    autocomplete="off"
-                    name="phone"
-                    id="phone"
-                    required
-                  />
-                  <label for="phone" class="form__label">Phone Number</label>
-                </div>
+                  <div class="form__group">
+                    <input
+                      type="number"
+                      inputmode="numeric"
+                      class="form__input <?= $invalid_class_name ?? "" ?>"
+                      placeholder="Phone Number"
+                      autocomplete="off"
+                      name="phone"
+                      id="phone"
+                      required
+                    />
+                    <label for="phone" class="form__label">Phone Number</label>
+                  </div>
 
-                <div class="form__group">
-                  <input
-                    type="email"
-                    inputmode="email"
-                    class="form__input <?= $invalid_class_name ?? "" ?>"
-                    placeholder="Email"
-                    autocomplete="off"
-                    name="email"
-                    id="email"
-                    required
-                  />
-                  <label for="email" class="form__label">Email Address</label>
-                </div>
+                  <div class="form__group">
+                    <input
+                      type="email"
+                      inputmode="email"
+                      class="form__input <?= $invalid_class_name ?? "" ?>"
+                      placeholder="Email"
+                      autocomplete="off"
+                      name="email"
+                      id="email"
+                      required
+                    />
+                    <label for="email" class="form__label">Email Address</label>
+                  </div>
 
-                <div class="form__group">
-                  <button
-                    class="
-                      btn-main
-                      btn-main__white
-                      btn-main__animated
-                      btn-main__contact
-                      form__btn
-                    "
-                  type="submit"
+                  <div class="form__group">
+                    <button
+                      class="
+                        btn-main
+                        btn-main__white
+                        btn-main__animated
+                        btn-main__contact
+                        form__btn
+                      "
+                      type="submit"
                     >
-                    Send &rarr;
-                  </button>
+                      Send &rarr;
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>
@@ -221,8 +223,8 @@ $message_sent = true;
       </div>
 
       <div class="row">
-        <div class="flex-container flex-container__footer">  
-        <div class="footer__navigation flex-container__footer--item">
+        <div class="flex-container flex-container__footer">
+          <div class="footer__navigation flex-container__footer--item">
             <ul class="footer__list">
               <li class="footer__item">
                 <a href="index.html#header" class="footer__link">Home</a>
@@ -237,14 +239,14 @@ $message_sent = true;
                 <a href="contact.html" class="footer__link">Contact</a>
               </li>
             </ul>
-        </div>
+          </div>
 
           <p class="footer__copyright flex-container__footer--item">
             Built by
             <a href="index.html#aboutme" class="footer__link">Joseph Powell</a>;
             &nbsp; a Houston based front end developer.
           </p>
-      </div>
+        </div>
       </div>
     </footer>
 
@@ -257,9 +259,8 @@ $message_sent = true;
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
-
     <?php
     endif;
     ?>
-</body>
+  </body>
 </html>
