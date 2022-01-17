@@ -67,17 +67,17 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     display: inline-block; /*inline-block so the gradient is exclusively behind the heading (block elements take up 100% of the availble width, inline-block avoids this)*/
+    background-image: -o-linear-gradient(
+      top,
+      $color-primary,
+      $color-primary-dark
+    );
     background-image: -webkit-gradient(
       linear,
       left top,
       left bottom,
       from($color-primary),
       to($color-primary-dark)
-    );
-    background-image: -o-linear-gradient(
-      top,
-      $color-primary,
-      $color-primary-dark
     );
     background-image: linear-gradient(
       to bottom,
@@ -169,6 +169,16 @@ body {
     // ALL h3's
     font-size: 2.5rem;
     letter-spacing: 0.2rem;
+
+    @include respond(tab-landscape) {
+      // width < 1200
+      font-size: 2rem;
+    }
+
+    @include respond(tab-portrait) {
+      // width < 900
+      font-size: 2.5rem;
+    }
 
     @include respond(small-phone) {
       // width < 450

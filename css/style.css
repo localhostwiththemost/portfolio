@@ -132,8 +132,8 @@ body .heading-secondary {
   letter-spacing: 0.2rem;
   display: inline-block;
   /*inline-block so the gradient is exclusively behind the heading (block elements take up 100% of the availble width, inline-block avoids this)*/
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#50bab4), to(#368883));
   background-image: -o-linear-gradient(top, #50bab4, #368883);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#50bab4), to(#368883));
   background-image: linear-gradient(to bottom, #50bab4, #368883);
   -webkit-background-clip: text;
   /*Clips the background image exactly where the text sits*/
@@ -213,6 +213,16 @@ body .heading-secondary-white:hover {
 body .heading-tertiary {
   font-size: 2.5rem;
   letter-spacing: 0.2rem;
+}
+@media (max-width: 75em) {
+  body .heading-tertiary {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 56.25em) {
+  body .heading-tertiary {
+    font-size: 2.5rem;
+  }
 }
 @media (max-width: 28.125em) {
   body .heading-tertiary {
@@ -975,10 +985,11 @@ body .sites-box-sites {
 
 .header {
   height: 95vh;
+  -webkit-background-image: -webkit-gradient(linear, left top, left bottom, from(linear), color-stop(top, left), color-stop(bottom, left), color-stop(from(rgba(54, 136, 131, 0.4))), to(to(rgba(80, 186, 180, 0)))), url("../img/hero-min.webp");
   -webkit-background-image: linear-gradient(linear, left top, left bottom, from(rgba(54, 136, 131, 0.4)), to(rgba(80, 186, 180, 0))), url("../img/hero-min.webp");
   background-image: -o-linear-gradient(top, rgba(54, 136, 131, 0.4), rgba(80, 186, 180, 0)), url("../img/hero-min.webp");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(54, 136, 131, 0.4)), to(rgba(80, 186, 180, 0))), url("../img/hero-min.webp");
   background-image: linear-gradient(to bottom, rgba(54, 136, 131, 0.4), rgba(80, 186, 180, 0)), url("../img/hero-min.webp");
-  -webkit-background-size: cover;
   background-size: cover;
   -webkit-background-position: top;
   background-position: top;

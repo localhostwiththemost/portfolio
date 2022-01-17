@@ -61,7 +61,7 @@ $message_sent = true;
   </head>
 
   <body>
-    
+      
       <?php
       if($message_sent):
       ?>
@@ -135,44 +135,24 @@ $message_sent = true;
 
                 <div class="flex-container flex-container__form">
                   <div class="form__group">
-                    <input
-                      type="text"
-                      class="form__input <?= $invalid_class_name ?? "" ?>"
-                      placeholder="Name or Company Name"
-                      autocomplete="off"
-                      name="name"
-                      id="name"
-                      required
+                    <input type="text" class="form__input
+                    <?= $invalid_class_name ?? "" ?>" placeholder="Name or Company" autocomplete="off" name="name" id="name" required
                     />
                     <!--The label and input are connected thru the id and for properties. Both must have the same value(name)-->
                     <label for="name" class="form__label">Name</label>
                   </div>
 
                   <div class="form__group">
-                    <input
-                      type="number"
-                      inputmode="numeric"
-                      class="form__input <?= $invalid_class_name ?? "" ?>"
-                      placeholder="Phone Number"
-                      autocomplete="off"
-                      name="phone"
-                      id="phone"
-                      required
-                    />
+                    <input type="number" inputmode="numeric" class="form__input
+                    <?= $invalid_class_name ?? "" ?>" placeholder="Phone Number"
+                    autocomplete="off" name="phone" id="phone" required />
                     <label for="phone" class="form__label">Phone Number</label>
                   </div>
 
                   <div class="form__group">
-                    <input
-                      type="email"
-                      inputmode="email"
-                      class="form__input <?= $invalid_class_name ?? "" ?>"
-                      placeholder="Email"
-                      autocomplete="off"
-                      name="email"
-                      id="email"
-                      required
-                    />
+                    <input type="email" inputmode="email" class="form__input
+                    <?= $invalid_class_name ?? "" ?>" placeholder="Email"
+                    autocomplete="off" name="email" id="email" required />
                     <label for="email" class="form__label">Email Address</label>
                   </div>
 
