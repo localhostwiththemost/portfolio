@@ -23,6 +23,12 @@ body {
       text-shadow: -5px 5px 0px $color-primary, -10px 10px 0px #43ada7,
         -15px 15px 0px #39a39d;
 
+      @include respond(tab-landscape) {
+        // width < 1200px?
+        text-shadow: -4px 4px 0px $color-primary, -8px 8px 0px #43ada7,
+          -12px 12px 0px #39a39d;
+      }
+
       @include respond(tab-portrait) {
         // width < 900px?
         text-shadow: -3px 3px 0px $color-primary, -6px 6px 0px #43ada7,

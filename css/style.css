@@ -93,6 +93,11 @@ body .heading-primary--main {
   padding-bottom: 1.5rem;
   text-shadow: -5px 5px 0px #50bab4, -10px 10px 0px #43ada7, -15px 15px 0px #39a39d;
 }
+@media (max-width: 75em) {
+  body .heading-primary--main {
+    text-shadow: -4px 4px 0px #50bab4, -8px 8px 0px #43ada7, -12px 12px 0px #39a39d;
+  }
+}
 @media (max-width: 56.25em) {
   body .heading-primary--main {
     text-shadow: -3px 3px 0px #50bab4, -6px 6px 0px #43ada7, -9px 9px 0px #39a39d;
