@@ -997,7 +997,7 @@ body .sites-box-sites {
   background-attachment: fixed;
   position: relative;
 }
-@media (max-width: 37.5em) {
+@media (max-width: 75em) {
   .header {
     background-attachment: scroll;
   }

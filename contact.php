@@ -213,10 +213,10 @@ $message_sent = true;
                 <a href="index.html#skills" class="footer__link">Skills</a>
               </li>
               <li class="footer__item">
-                <a href="index.html#resume" class="footer__link">Resume</a>
+                <a href="index.html#aboutme" class="footer__link">About Me</a>
               </li>
               <li class="footer__item">
-                <a href="contact.html" class="footer__link">Contact</a>
+                <a href="index.html#resume" class="footer__link">Resume</a>
               </li>
             </ul>
           </div>

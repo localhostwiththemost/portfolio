@@ -46,8 +46,8 @@
   background-attachment: fixed;
   position: relative;
 
-  @include respond(phone) {
-    // When the screen width is LESS THAN 600px scroll with the page(mobile safari bug)
+  @include respond(tab-landscape) {
+    // When the screen width is LESS THAN 1200px scroll with the page(mobile safari bug)
     background-attachment: scroll;
   }
 
