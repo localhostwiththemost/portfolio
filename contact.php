@@ -69,7 +69,7 @@ $message_sent = true;
      <div class="contact-form-thanks u-margin-top-big u-margin-bottom-big">
       <h2 class="heading-secondary">Thanks, I'll be in touch</h2>
       <div class="u-center-text u-margin-top-small">
-        <a href="home" class="btn-text">Return to home page</a>
+        <a href="index.html" class="btn-text">Return to home page</a>
       </div>
     </div>
       </body>
@@ -89,16 +89,16 @@ $message_sent = true;
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="home#header" class="navigation__link">Home</a>
+            <a href="index.html#header" class="navigation__link">Home</a>
           </li>
           <li class="navigation__item">
-            <a href="home#skills" class="navigation__link">Skills</a>
+            <a href="index.html#skills" class="navigation__link">Skills</a>
           </li>
           <li class="navigation__item">
-            <a href="home#aboutme" class="navigation__link">About Me</a>
+            <a href="index.html#aboutme" class="navigation__link">About Me</a>
           </li>
           <li class="navigation__item">
-            <a href="home#resume" class="navigation__link">Resume</a>
+            <a href="index.html#resume" class="navigation__link">Resume</a>
           </li>
         </ul>
       </nav>
@@ -207,23 +207,23 @@ $message_sent = true;
           <div class="footer__navigation flex-container__footer--item">
             <ul class="footer__list">
               <li class="footer__item">
-                <a href="home#header" class="footer__link">Home</a>
+                <a href="index.html#header" class="footer__link">Home</a>
               </li>
               <li class="footer__item">
-                <a href="home#skills" class="footer__link">Skills</a>
+                <a href="index.html#skills" class="footer__link">Skills</a>
               </li>
               <li class="footer__item">
-                <a href="home#aboutme" class="footer__link">About Me</a>
+                <a href="index.html#aboutme" class="footer__link">About Me</a>
               </li>
               <li class="footer__item">
-                <a href="home#resume" class="footer__link">Resume</a>
+                <a href="index.html#resume" class="footer__link">Resume</a>
               </li>
             </ul>
           </div>
 
           <p class="footer__copyright flex-container__footer--item">
             Built by
-            <a href="home#aboutme" class="footer__link">Joseph Powell</a>;
+            <a href="index.html#aboutme" class="footer__link">Joseph Powell</a>;
             &nbsp; a Houston based front end developer.
           </p>
         </div>
