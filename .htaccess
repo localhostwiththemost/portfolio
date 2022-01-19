@@ -1,13 +1,25 @@
 RewriteEngine On
 
-#To remove .php extension for a single file 
+#To remove .php extension for a single file from url 
 
 #RewriteRule ^contact$ contact.php [L]
 
-#To remove all php file extensions
+#To remove all php file extensions from url
 
 RewriteCond %{REQUEST_FILENAME} !-d
-
 RewriteCond %{REQUEST_FILENAME} !-f
-
 RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+#Prevents user from accessing page using page_name.html
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+#To remove .html extensions from url
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+#This rewrites /home into index.html
+
+RewriteRule ^home index.html [L]
