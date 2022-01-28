@@ -114,6 +114,7 @@ $message_sent = true;
             href="mailto:jpowelldev@gmail.com"
             target="_blank"
             class="section-contact-direct__email-link"
+            rel="noopener"
             >jpowelldev@gmail.com</a
           >
         </div>
@@ -187,6 +188,7 @@ $message_sent = true;
                 href="mailto:jpowelldev@gmail.com"
                 target="_blank"
                 class="social__link social__gmail"
+                rel="noopener"
                 ><ion-icon name="mail-outline"></ion-icon
               ></a>
             </li>
@@ -195,6 +197,7 @@ $message_sent = true;
                 href="https://github.com/localhostwiththemost"
                 class="social__link social__github"
                 target="_blank"
+                rel="noopener"
                 ><ion-icon name="logo-github"></ion-icon
               ></a>
             </li>
