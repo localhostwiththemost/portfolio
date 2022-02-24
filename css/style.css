@@ -790,6 +790,11 @@ body .sites-box-sites {
     flex-direction: column;
   }
 }
+.flex-container__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .flex-container__footer {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -48,6 +48,13 @@
     }
   }
 
+  // WEBSITE LINKS
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   // FOOTER
   &__footer {
     display: -webkit-box;
