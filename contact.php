@@ -227,7 +227,7 @@ $message_sent = true;
           <p class="footer__copyright flex-container__footer--item">
             Built by
             <a href="index.html#aboutme" class="footer__link">Joseph Powell</a>;
-            &nbsp; a Houston based front end developer.
+            &nbsp; a full stack web developer.
           </p>
         </div>
       </div>

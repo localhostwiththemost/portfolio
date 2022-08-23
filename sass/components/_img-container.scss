@@ -8,11 +8,4 @@
     display: block;
     margin: auto;
   }
-
-  &__projectimg {
-    width: 80%;
-    border-radius: $default-border-radius;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba($color-black, 0.35);
-    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.35);
-  }
 }

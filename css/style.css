@@ -38,13 +38,11 @@ ORDER OF MEDIA QUERY DEFINITIONS:
   margin: 0;
   padding: 0;
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-  /*Sets the box-sizing property on every element on the page to inherit which forces every element to inherit the border-box value in the body rule(Good practice)*/
+  box-sizing: inherit; /*Sets the box-sizing property on every element on the page to inherit which forces every element to inherit the border-box value in the body rule(Good practice)*/
 }
 
 html {
-  font-size: 62.5%;
-  /*62.5% of 16px = 10px (We use a % to be more user friendly, 16px is default)*/
+  font-size: 62.5%; /*62.5% of 16px = 10px (We use a % to be more user friendly, 16px is default)*/
   /*Global font-size (Each rem unit is now 10px)*/
 }
 @media (min-width: 112.5em) {
@@ -65,16 +63,14 @@ html {
 
 body {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  /*Changes the box model so that borders/paddings are no longer added to the total width/height we specify for a box*/
+  box-sizing: border-box; /*Changes the box model so that borders/paddings are no longer added to the total width/height we specify for a box*/
   padding: 3rem;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  line-height: 1.7;
-  /*The line-height is 1.7 times bigger than default(depends on font-size)*/
+  line-height: 1.7; /*The line-height is 1.7 times bigger than default(depends on font-size)*/
 }
 body p {
   font-family: "Roboto Slab", serif;
@@ -85,8 +81,7 @@ body .heading-primary {
   text-transform: uppercase;
 }
 body .heading-primary--main {
-  display: block;
-  /*Block elements create linebreaks before and after them(what we want here)*/
+  display: block; /*Block elements create linebreaks before and after them(what we want here)*/
   font-size: 6rem;
   font-weight: 800;
   letter-spacing: 0.3rem;
@@ -104,8 +99,7 @@ body .heading-primary--main {
   }
 }
 body .heading-primary--sub {
-  display: block;
-  /*Block elements take up 100% of the width of the viewport(not height)*/
+  display: block; /*Block elements take up 100% of the width of the viewport(not height)*/
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 0.3rem;
@@ -135,13 +129,11 @@ body .heading-secondary {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  display: inline-block;
-  /*inline-block so the gradient is exclusively behind the heading (block elements take up 100% of the availble width, inline-block avoids this)*/
+  display: inline-block; /*inline-block so the gradient is exclusively behind the heading (block elements take up 100% of the availble width, inline-block avoids this)*/
   background-image: -o-linear-gradient(top, #50bab4, #368883);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#50bab4), to(#368883));
   background-image: linear-gradient(to bottom, #50bab4, #368883);
-  -webkit-background-clip: text;
-  /*Clips the background image exactly where the text sits*/
+  -webkit-background-clip: text; /*Clips the background image exactly where the text sits*/
   background-clip: text;
   color: transparent;
   -webkit-transition: all 0.2s;
@@ -275,18 +267,13 @@ body .sites-box-sites {
 .btn-main, .btn-main:link, .btn-main:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 4rem;
-  /*15px top/bottom, 40px left/right*/
-  display: inline-block;
-  /*We define it as inline-block so that we can position it or add height/width/padding later. Each button now occupies its own space*/
-  border-radius: 10rem;
-  /*Rounds off buttons*/
+  padding: 1.5rem 4rem; /*15px top/bottom, 40px left/right*/
+  display: inline-block; /*We define it as inline-block so that we can position it or add height/width/padding later. Each button now occupies its own space*/
+  border-radius: 10rem; /*Rounds off buttons*/
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
-  transition: all 0.2s;
-  /*All of the btns properties are enabled to be animated, 0.2s duration*/
-  position: relative;
-  /*To help position the effect behind the btn*/
+  transition: all 0.2s; /*All of the btns properties are enabled to be animated, 0.2s duration*/
+  position: relative; /*To help position the effect behind the btn*/
   font-size: 2rem;
   border: none;
   cursor: pointer;
@@ -301,30 +288,24 @@ body .sites-box-sites {
 .btn-main:hover {
   -webkit-transform: translateY(-3px);
   -ms-transform: translateY(-3px);
-  transform: translateY(-3px);
-  /*Negative values go up, positive down on the y-axis*/
+  transform: translateY(-3px); /*Negative values go up, positive down on the y-axis*/
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  /*0 shadow x-axis, 10px shadow y-axis(down due to positive value), 20px blur, black shadow with 0.2 opacity*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /*0 shadow x-axis, 10px shadow y-axis(down due to positive value), 20px blur, black shadow with 0.2 opacity*/
 }
 .btn-main:hover::after {
   /*When we hover the btn, we want styles for the after psuedo-element*/
   -webkit-transform: scaleX(1.4) scaleY(1.6);
   -ms-transform: scaleX(1.4) scaleY(1.6);
-  transform: scaleX(1.4) scaleY(1.6);
-  /*after pseudo-element appears 1.4x its normal size on the x-axis and 1.6X on the y-axis when hovered(Makes effect stand out more)*/
-  opacity: 0;
-  /*We want the effect to fade out on hover*/
+  transform: scaleX(1.4) scaleY(1.6); /*after pseudo-element appears 1.4x its normal size on the x-axis and 1.6X on the y-axis when hovered(Makes effect stand out more)*/
+  opacity: 0; /*We want the effect to fade out on hover*/
 }
 .btn-main:active, .btn-main:focus {
   outline: none;
   -webkit-transform: translateY(-1px);
   -ms-transform: translateY(-1px);
-  transform: translateY(-1px);
-  /*Btn bounces up 1px when clicked*/
+  transform: translateY(-1px); /*Btn bounces up 1px when clicked*/
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  /*When the button is active, we want the shadow to look smaller on the y-axis to make it look like the button is closer to the page, further from user; less blur as well*/
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /*When the button is active, we want the shadow to look smaller on the y-axis to make it look like the button is closer to the page, further from user; less blur as well*/
 }
 .btn-main__white {
   background-color: #fff;
@@ -335,33 +316,24 @@ body .sites-box-sites {
 }
 .btn-main::after {
   /*We're adding an element that looks exactly like the btn we already have, but we put it behind the button, when hovered out this hidden psuedo element goes back behind the btn*/
-  content: "";
-  /*You must specify the content property for a pseudo element to appear on the page*/
-  display: inline-block;
-  /*You must also specify the display property, inline-block because we've already defined that our btns are all inline-block in the link/visited rule^*/
+  content: ""; /*You must specify the content property for a pseudo element to appear on the page*/
+  display: inline-block; /*You must also specify the display property, inline-block because we've already defined that our btns are all inline-block in the link/visited rule^*/
   height: 100%;
-  width: 100%;
-  /*Since this psuedo element is a child element to btn, 100% of the width and height of btn*/
-  border-radius: 10rem;
-  /*To match the btn*/
-  position: absolute;
-  /*We're positioning this element behind the btn*/
+  width: 100%; /*Since this psuedo element is a child element to btn, 100% of the width and height of btn*/
+  border-radius: 10rem; /*To match the btn*/
+  position: absolute; /*We're positioning this element behind the btn*/
   top: 0;
   left: 0;
-  z-index: -1;
-  /*Makes certain the effect is behind the button*/
+  z-index: -1; /*Makes certain the effect is behind the button*/
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
-  transition: all 0.4s;
-  /*To animate an element, we put the transition property in the initial state; in this case, the initial state is the after psuedo element*/
+  transition: all 0.4s; /*To animate an element, we put the transition property in the initial state; in this case, the initial state is the after psuedo element*/
 }
 .btn-main__animated {
   -webkit-animation: moveInBottom 2.2s ease-out 0.75s;
-  animation: moveInBottom 2.2s ease-out 0.75s;
-  /*0.75s delay*/
+  animation: moveInBottom 2.2s ease-out 0.75s; /*0.75s delay*/
   -webkit-animation-fill-mode: backwards;
-  animation-fill-mode: backwards;
-  /*Applys the 0% styles of moveInBottom before the animation starts*/
+  animation-fill-mode: backwards; /*Applys the 0% styles of moveInBottom before the animation starts*/
 }
 @media (max-width: 37.5em) {
   .btn-main__contact {
@@ -598,11 +570,91 @@ body .sites-box-sites {
   display: block;
   margin: auto;
 }
-.img-container__projectimg {
-  width: 80%;
-  border-radius: 0.3rem;
-  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.35);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.35);
+
+/* SLIDER */
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  background-color: #fff;
+  /*background-color: #888;*/
+  opacity: 1;
 }
 
 .skill-box {
@@ -981,16 +1033,22 @@ body .sites-box-sites {
   width: calc((100% - 2 * 6rem) / 3);
 }
 .row .col-2-of-3 {
-  width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem );
+  width: calc(
+      2 * ((100% - 2 * 6rem) / 3) + 6rem
+    );
 }
 .row .col-1-of-4 {
   width: calc((100% - 3 * 6rem) / 4);
 }
 .row .col-2-of-4 {
-  width: calc( 2 * ((100% - 3 * 6rem) / 4) + 6rem );
+  width: calc(
+      2 * ((100% - 3 * 6rem) / 4) + 6rem
+    );
 }
 .row .col-3-of-4 {
-  width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem );
+  width: calc(
+      3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem
+    );
 }
 
 .header {
@@ -1014,16 +1072,12 @@ body .sites-box-sites {
 }
 .header__text-box {
   position: absolute;
-  top: 50%;
-  /*40% from the top and 50% from the left of the header(parent element)*/
-  left: 50%;
-  /*Measurement starts at the top left of the .text-box element(Therefore its off center)*/
+  top: 50%; /*40% from the top and 50% from the left of the header(parent element)*/
+  left: 50%; /*Measurement starts at the top left of the .text-box element(Therefore its off center)*/
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  /*Shifts 50% of the element's(text-box) width to the left and 50% of the element's height to the top(centers text-box)*/
-  text-align: center;
-  /*Centers call to action button under the h1*/
+  transform: translate(-50%, -50%); /*Shifts 50% of the element's(text-box) width to the left and 50% of the element's height to the top(centers text-box)*/
+  text-align: center; /*Centers call to action button under the h1*/
 }
 
 html {
