@@ -747,6 +747,7 @@ body .sites-box-sites {
 .other-skills__ul li::before {
   content: "✅";
   display: inline-block;
+  margin-right: 2px;
 }
 
 .sites-box {
@@ -991,7 +992,7 @@ body .sites-box-sites {
   color: #e95950;
 }
 .social__github:hover, .social__github:active {
-  color: #000;
+  color: #f4b400;
 }
 .social__linkedin:hover, .social__linkedin:active {
   color: #007bb5;
